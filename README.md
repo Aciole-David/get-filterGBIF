@@ -23,9 +23,11 @@ Just make sure to get the proper dbf
 
 ### what it does:
 dbf: a large database downloaded from GBIF (e.g., all Formicidae entries)
+
 spl: a list of species names (e.g., some ant species from a specific location)
 
 The bash script works in 5 steps:
+
 1 - Extract specific columns (e.g., 7 columns; gbifID, scientificName, decimalLatitude, decimalLongitude, basisOfRecord, colectionCode and catalogNumber) 
 
 2 - Remove empty lines in column 3 and column 7
