@@ -25,6 +25,21 @@ Just make sure to get the proper dbf
 dbf: a large database downloaded from GBIF (e.g., all Formicidae entries)
 spl: a list of species names (e.g., some ant species from a specific location)
 
-First, extract specific columns (e.g., gbifID, scientificName, decimalLatitude, decimalLongitude, basisOfRecord, colectionCode and catalogNumber) 
+1 - Extract specific columns (e.g., 7 columns; gbifID, scientificName, decimalLatitude, decimalLongitude, basisOfRecord, colectionCode and catalogNumber) 
 
-Then, get all the lines from dbf containing the entries in spl
+2 - Remove empty lines in column 3 and column 7
+
+3 - Get all the lines from dbf containing the entries in spl
+
+4 - Filters only the largest and smallest values from column 'decimalLatitude'
+
+5 - Arrange, for each species on spl, the 7 columns for the largest decimalLatitude followed by the 7 columns for the smallet decimalLatitude.
+Something like:
+gbifID	scientificName	decimalLatitude	decimalLongitude	basisOfRecord	collectionCode	catalogNumber	gbifID	scientificName	decimalLatitude	decimalLongitude	basisOfRecord	collectionCode	catalogNumber
+xxxxx	species1	[MAX]declat	xxxxx	xxxxx	xxxxx	xxxxx	xxxxx	species1	[MIN]declat	xxxxx	xxxxx	xxxxx	xxxxx
+xxxxx	species2	[MAX]declat	xxxxx	xxxxx	xxxxx	xxxxx	xxxxx	species2	[MIN]declat	xxxxx	xxxxx	xxxxx	xxxxx
+xxxxx	species3	[MAX]declat	xxxxx	xxxxx	xxxxx	xxxxx	xxxxx	species3	[MIN]declat	xxxxx	xxxxx	xxxxx	xxxxx
+xxxxx	species4	[MAX]declat	xxxxx	xxxxx	xxxxx	xxxxx	xxxxx	species4	[MIN]declat	xxxxx	xxxxx	xxxxx	xxxxx
+![image](https://user-images.githubusercontent.com/29051553/109365292-99aeba00-786f-11eb-9c91-2d25b3504fc4.png)
+
+
