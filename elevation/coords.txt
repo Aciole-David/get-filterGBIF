@@ -1,0 +1,3 @@
+#UMC campus Mogi das Cruzes, SP
+decimalLatitude	decimalLongitude
+-23.516814518815195	-46.18264158747329
