@@ -14,12 +14,12 @@ library('rgbif')
 #-23.516814518815195,	-46.18264158747329
 
 coords_df=data.frame(read.table("coords.txt", header = T))
-elevation(input = coords_df, username = "acioled")
-umc<-elevation(input = coords_df, username = "acioled")
+elevation(input = coords_df, username = "INSIRA-SEU-USUARIO")
+umc<-elevation(input = coords_df, username = "INSIRA-SEU-USUARIO")
 
 # 3.2: Carregar coordenadas como lista:
 coords <- list(c(-23.516814518815195, -46.18264158747329))
-elevation(latlong=coords, username = "acioled")
-umc<-elevation(latlong=coords, username = "acioled")
+elevation(latlong=coords, username = "INSIRA-SEU-USUARIO")
+umc<-elevation(latlong=coords, username = "INSIRA-SEU-USUARIO")
 
 
